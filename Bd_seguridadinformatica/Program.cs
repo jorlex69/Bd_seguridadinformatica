@@ -16,7 +16,7 @@ namespace Bd_seguridadinformatica
             ApplicationConfiguration.Initialize();
             //var context = new SeguridadInformaticaContext();
             //context.Database.EnsureCreated();
-            Application.Run(new Add_user());
+            Application.Run(new Form1());
         }
     }
 }
