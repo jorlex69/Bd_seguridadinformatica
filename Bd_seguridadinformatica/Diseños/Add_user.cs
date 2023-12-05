@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Negocio.Procedimientos.Pass_secure;
 
 namespace Bd_seguridadinformatica.Diseños
 {
@@ -55,7 +56,24 @@ namespace Bd_seguridadinformatica.Diseños
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarUsuario();
+
+            bool esSegura = ValidadorContraseña.AlgoritmoContraseñaSegura(textBox3.Text + textBox4.Text);
+            if (esSegura)
+            {
+                AgregarUsuario();
+
+           
+                textBox1.Text = string.Empty;
+                textBox2.Text = string.Empty;
+                textBox3.Text = string.Empty;
+                textBox4.Text = string.Empty;
+
+            }
+            else
+            {
+                MessageBox.Show("Su contraseña es insegura, asegurese que incluya Mayus, 8 digitos y Simbolos");
+            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

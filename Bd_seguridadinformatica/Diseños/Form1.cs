@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Negocio.Procedimientos;
 using System.Diagnostics.Eventing.Reader;
 using System.Text;
+using static Negocio.Procedimientos.Pass_secure;
 
 namespace Bd_seguridadinformatica
 {
@@ -12,6 +13,7 @@ namespace Bd_seguridadinformatica
     {
 
         private NInicioSesion nInicioSesion;
+    
         public Form1()
         {
             nInicioSesion = new NInicioSesion();
@@ -71,6 +73,8 @@ namespace Bd_seguridadinformatica
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             InicioSes();
 
         }
