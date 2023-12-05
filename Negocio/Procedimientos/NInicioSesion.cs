@@ -16,7 +16,7 @@ namespace Negocio.Procedimientos
         private readonly SeguridadInformaticaContext context;
         public NInicioSesion() { context = new SeguridadInformaticaContext(); }
 
-        public bool Login(Usuario user)
+        public bool Login( Usuario user)
         {
             try
             {
@@ -29,6 +29,7 @@ namespace Negocio.Procedimientos
                     if (Encrypt.EncryptUser(user.Correo).SequenceEqual(Encrypt.EncryptUser(user.Correo)))
                     {
                         var result = (usuario.Password.SequenceEqual(user.Password)) ? true : false;
+
                         if (!result)
                         { 
                             usuario.Contador += 1;
@@ -62,5 +63,6 @@ namespace Negocio.Procedimientos
             }
         }
 
+      
     }
 }
