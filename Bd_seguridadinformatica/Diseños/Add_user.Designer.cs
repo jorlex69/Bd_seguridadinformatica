@@ -94,6 +94,7 @@
             // 
             textBox3.Location = new Point(182, 135);
             textBox3.Name = "textBox3";
+            textBox3.PasswordChar = '*';
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 6;
             // 
@@ -101,6 +102,7 @@
             // 
             textBox4.Location = new Point(182, 176);
             textBox4.Name = "textBox4";
+            textBox4.PasswordChar = '*';
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 7;
             // 
@@ -122,6 +124,7 @@
             button2.TabIndex = 9;
             button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Add_user
             // 

@@ -29,7 +29,8 @@ namespace Bd_seguridadinformatica.Diseños
         {
             try
             {
-                if (!string.IsNullOrEmpty(textBox1.Text))
+                if (!string.IsNullOrEmpty(textBox1.Text)&& !string.IsNullOrEmpty(textBox2.Text)
+                    && !string.IsNullOrEmpty(textBox3.Text)&& !string.IsNullOrEmpty(textBox4.Text))
                 {
                     var resu = nUsuarios.Create(new Usuario
                     {
@@ -43,6 +44,10 @@ namespace Bd_seguridadinformatica.Diseños
                     });
                     MessageBox.Show(resu, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else
+                {
+                    MessageBox.Show("Campos vacios");
+                }
 
             }
             catch (Exception ex) { }
@@ -51,6 +56,11 @@ namespace Bd_seguridadinformatica.Diseños
         private void button1_Click(object sender, EventArgs e)
         {
             AgregarUsuario();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

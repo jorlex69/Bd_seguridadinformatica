@@ -89,6 +89,7 @@
             button2.TabIndex = 5;
             button2.Text = "Olvide mi contraseña";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 

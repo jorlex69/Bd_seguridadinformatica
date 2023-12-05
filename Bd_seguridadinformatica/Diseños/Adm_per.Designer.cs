@@ -40,6 +40,7 @@
             button1 = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -106,7 +107,7 @@
             dataGridView1.Location = new Point(76, 220);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(633, 207);
             dataGridView1.TabIndex = 21;
             // 
             // button6
@@ -149,11 +150,22 @@
             radioButton2.Text = "Administrador";
             radioButton2.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(341, 64);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 27;
+            button2.Text = "Regresar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Adm_per
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(button1);
@@ -166,6 +178,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Adm_per";
             Text = "Adm_per";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -187,5 +200,6 @@
         private Button button1;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
+        private Button button2;
     }
 }

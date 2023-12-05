@@ -16,5 +16,24 @@ namespace Bd_seguridadinformatica.Diseños
         {
             InitializeComponent();
         }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+        }
+
+        private void administrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_user add = new Add_user();
+            add.ShowDialog();
+        }
+
+        private void editarPermisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Adm_per admp = new Adm_per();
+            admp.ShowDialog();
+        }
     }
 }

@@ -143,7 +143,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(442, 54);
+            button1.Location = new Point(436, 54);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 11;
@@ -152,7 +152,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(442, 98);
+            button2.Location = new Point(436, 95);
             button2.Name = "button2";
             button2.Size = new Size(122, 23);
             button2.TabIndex = 12;
@@ -161,7 +161,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(442, 148);
+            button3.Location = new Point(436, 136);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 13;
@@ -186,7 +186,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(436, 198);
+            button4.Location = new Point(436, 185);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 16;
@@ -195,12 +195,13 @@
             // 
             // button5
             // 
-            button5.Location = new Point(436, 233);
+            button5.Location = new Point(436, 229);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 17;
             button5.Text = "Regresar";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -214,15 +215,15 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(261, 335);
+            dataGridView1.Location = new Point(62, 327);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(615, 150);
             dataGridView1.TabIndex = 19;
             // 
             // button7
             // 
-            button7.Location = new Point(436, 282);
+            button7.Location = new Point(344, 276);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 20;

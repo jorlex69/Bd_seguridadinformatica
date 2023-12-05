@@ -32,9 +32,9 @@
             inicioToolStripMenuItem = new ToolStripMenuItem();
             perfilToolStripMenuItem = new ToolStripMenuItem();
             configurarToolStripMenuItem = new ToolStripMenuItem();
-            cerrarSesionToolStripMenuItem = new ToolStripMenuItem();
             administrarUsuariosToolStripMenuItem = new ToolStripMenuItem();
             editarPermisosToolStripMenuItem = new ToolStripMenuItem();
+            cerrarSesionToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,23 +66,26 @@
             configurarToolStripMenuItem.Size = new Size(76, 20);
             configurarToolStripMenuItem.Text = "Configurar";
             // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            cerrarSesionToolStripMenuItem.Size = new Size(88, 20);
-            cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
-            // 
             // administrarUsuariosToolStripMenuItem
             // 
             administrarUsuariosToolStripMenuItem.Name = "administrarUsuariosToolStripMenuItem";
             administrarUsuariosToolStripMenuItem.Size = new Size(184, 22);
             administrarUsuariosToolStripMenuItem.Text = "Administrar Usuarios";
+            administrarUsuariosToolStripMenuItem.Click += administrarUsuariosToolStripMenuItem_Click;
             // 
             // editarPermisosToolStripMenuItem
             // 
             editarPermisosToolStripMenuItem.Name = "editarPermisosToolStripMenuItem";
             editarPermisosToolStripMenuItem.Size = new Size(184, 22);
             editarPermisosToolStripMenuItem.Text = "Editar permisos";
+            editarPermisosToolStripMenuItem.Click += editarPermisosToolStripMenuItem_Click;
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            cerrarSesionToolStripMenuItem.Size = new Size(88, 20);
+            cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            cerrarSesionToolStripMenuItem.Click += cerrarSesionToolStripMenuItem_Click;
             // 
             // Menu
             // 
