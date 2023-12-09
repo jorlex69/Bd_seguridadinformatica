@@ -47,6 +47,39 @@ namespace Negocio.Procedimientos
                 return false;
             }
         }
+
+        public string DesbloquearUsuario(Usuario usuario) {
+            try {
+                var user = context.Usuarios.Find(usuario.Correo);
+                if(user!=null)
+                {
+                    var userRol = (from u in context.Usuarios
+                                   join ur in context.RolUsuarios on u.Id equals ur.IdUsuario
+                                   join r in context.Roles on ur.IdRol equals r.Id
+                                   where u.Id.Equals( usuario.UsuarioActualiza)
+                                   select r).ToList();
+                    var result = userRol.First(a => a.Id == 1 );
+                    if (result!=null)
+                    {
+                        user.UsuarioActualiza = usuario.UsuarioActualiza;
+                        user.FechaActualizacion = usuario.FechaActualizacion;
+                        user.Contador = 0;
+                        user.Bloqueado = false;
+                        context.Entry(user).State = EntityState.Modified;
+                        var query = context.SaveChanges();
+                        string resultado = (query > 0) ? "Desbloqueado Correctamente" : "No se pudo desbloquear";
+                        return resultado;
+                    }
+                }
+                return "Usuario no existe";
+            }catch(Exception ex)
+            {
+                return ex.Message;
+            }
+            
+        }
+        
+
         public Usuario GetUsuario(Usuario user)
         {
             try

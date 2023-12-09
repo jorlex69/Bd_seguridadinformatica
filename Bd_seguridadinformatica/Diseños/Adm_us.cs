@@ -21,5 +21,10 @@ namespace Bd_seguridadinformatica.Diseños
         {
             this.Close();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

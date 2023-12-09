@@ -211,6 +211,7 @@
             button6.TabIndex = 18;
             button6.Text = "Buscar";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // dataGridView1
             // 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Negocio.Procedimientos;
 using System.Diagnostics.Eventing.Reader;
 using System.Text;
-using static Negocio.Procedimientos.Pass_secure;
+
 
 namespace Bd_seguridadinformatica
 {

@@ -16,16 +16,23 @@ namespace Negocio.Procedimientos
     {
         private readonly SeguridadInformaticaContext context;
         public NUsuarios() { context = new SeguridadInformaticaContext(); }
-
+        //estoy cansajo jefe, cansado
+        //profe como hago?, se como declarar variables pero no mi amor por ella :'V
+        //pecado dejar que los demas se encarguen de la tarea
         public string Create(Usuario user)
         {
             try
             {
-                context.Add(user);
-                var query = context.SaveChanges();
-                var result = (query > 0) ? "Guardado Correctamente" : "No se pudo Guardar";
-                return  result;
+                var userName = context.Usuarios.Find(user.Login);
+                if(userName != null) {
+                    context.Add(user);
+                    var query = context.SaveChanges();
+                    var result = (query > 0) ? "Guardado Correctamente" : "No se pudo Guardar";
+                    return result;
+                }
+                return "Un usuario con este Username ya existe \ncon id {userName.Id}";
             }
+            //$
             catch(Exception ex)
             {
                 return ex.Message;
